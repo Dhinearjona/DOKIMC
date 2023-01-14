@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+
+:target {
+  scroll-margin-top: 81px;
+}
+
+@media (max-width: 768px) {
+  :target {
+    scroll-margin-top: 105px;
+  }
+}
+:root {
+  --black: #000000;
+  --white: #FFFFFFFF;
+  --navyblue: #006083;
+  --lightblue: #83D1E7;
+  --lightgray: #F2F2F2;
+  --h1: 2.1rem;
+  --h2: 1.4rem;
+  --h3: 1.2rem;
+  --h5: 1.25rem;
+  --p: 1.1rem;
+}
+
+html {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  height: 100%;
+}
+
+a {
+  color: var(--black);
+}
+
+.header {
+  background-color: var(--white);
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  position: fixed;
+  justify-content: space-around;
+  width: 100%;
+  z-index: 3;
+}
+.header .logo {
+  width: 10rem;
+  float: left;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.5rem;
+}
+.header .award {
+  width: 5rem;
+  padding: 0.5rem 0.5rem;
+  display: none;
+}
+.header ul {
+  overflow: hidden;
+  background-color: var(--white);
+}
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  border-right: 1px solid var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.header li a:hover {
+  background-color: var(--lightgray);
+}
+.header li a .menu-btn:hover {
+  background-color: var(--lightgray);
+}
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+.header .menu .contact-btn {
+  background: var(--navyblue);
+  color: var(--white);
+  transition: 0.2s ease-out;
+  border-radius: 10px;
+}
+.header .menu .contact-btn:hover {
+  background: var(--black);
+}
+.header .menu-icon {
+  cursor: pointer;
+  float: right;
+  top: 1.4rem;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+.header .nav-icon {
+  background: var(--black);
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 18px;
+}
+.header .nav-icon:before {
+  background: var(--black);
+  content: "";
+  display: block;
+  height: 2px;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+  top: 5px;
+}
+.header .nav-icon:after {
+  background: var(--black);
+  content: "";
+  display: block;
+  height: 2px;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+  top: -5px;
+}
+.header .menu-btn {
+  display: none;
+}
+.header .menu-btn:checked ~ .menu {
+  max-height: 70vh;
+}
+.header .menu-btn:checked ~ .menu-icon .nav-icon {
+  background: transparent;
+}
+.header .menu-btn:checked ~ .menu-icon .nav-icon:before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+.header .menu-btn:checked ~ .menu-icon .nav-icon:after {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+@media (min-width: 48em) {
+  .header {
+    height: 5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .header .logo {
+    width: 8rem;
+  }
+  .header .award {
+    display: block;
+  }
+  .header li {
+    float: left;
+  }
+  .header a {
+    padding: 0;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
