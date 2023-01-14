@@ -659,6 +659,7 @@
 }
 
 .container {
+    padding: 5rem 0;
     height: 100vh;
     width: 100%;
     display: flex;
@@ -713,8 +714,6 @@
                     font-style: italic;
                     color: var(--navyblue);
                 }
-
-
             }
         }
     }
