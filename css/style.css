@@ -607,6 +607,9 @@
   font-size: var(--p);
   font-weight: 700;
 }
+.foot .footer-copyright a {
+  color: var(--lightblue);
+}
 .foot .footer-copyright .social-media {
   display: flex;
   justify-content: center;
