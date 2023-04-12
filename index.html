@@ -7,54 +7,92 @@
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <title>DOKI Medical Clinic</title>
 </head>
 <body>
     <header class="header">
-        <div class="logo">
-            <a href="index.html"><img src="img/logo.png" class="logo"></a>
-            <a href="index.html"><img src="img/award1.png" class="award"></a>
-            <a href="index.html"><img src="img/award2.png" class="award"></a>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3 col-sm-12">
+                <div class="logo">
+                    <a href="index.html"><img src="img/logo.png" class="logo img-fluid"></a>
+                </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                <div class="logo d-flex justify-content-center">
+                    <a href="index.html"><img src="img/award1.png" class="award img-fluid mx-3"></a>
+                    <a href="index.html"><img src="img/award2.png" class="award img-fluid mx-3"></a>
+                </div>
+                </div>
+                <div class="col-md-3 col-sm-12">
+                <input class="menu-btn" type="checkbox" id="menu-btn" />
+                <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+                <ul class="menu text-end">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#doctor">Doctors</a></li>
+                    <li><a href="#review">Reviews</a></li>
+                    <li><a href="https://www.messenger.com/t/100406898588103" target="_blank" class="book_btn btn btn-primary">Book a Consultation</a></li>
+                </ul>
+                </div>
+            </div>
         </div>
-        <input class="menu-btn" type="checkbox" id="menu-btn" />
-        <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
-        <ul class="menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#services">Our Services</a></li>
-            <li><a href="#doctor">Our Doctors</a></li>
-            <li><a href="#review">Patient Reviews</a></li>
-            <li><a href="#consult">Consult</a></li>
-            <li><a href="https://www.facebook.com/DokiPhilippines/" target="_blank" class="contact-btn">Contact Us</a></li>
-        </ul>
     </header>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/cover/1.png"></div>
+                    <div class="swiper-slide"><img src="img/cover/2.png"></div>
+                    <div class="swiper-slide"><img src="img/cover/3.png"></div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="./img/cover/1.png" /></div>
-            <div class="swiper-slide"><img src="./img/cover/2.png" /></div>
-            <div class="swiper-slide"><img src="./img/cover/3.png" /></div>
-            <div class="swiper-slide"><img src="./img/cover/4.png" /></div>
-            <div class="swiper-slide"><img src="./img/cover/5.png" /></div>
+            <div class="swiper-slide">
+                <img src="img/cover/1.png" />
+            </div>
+            <div class="swiper-slide">
+                <img src="img/cover/2.png" />
+            </div>
+            <div class="swiper-slide">
+                <img src="img/cover/3.png" />
+            </div>
+            <div class="swiper-slide">
+                <img src="img/cover/4.png" />
+            </div>
+            <div class="swiper-slide">
+                <img src="img/cover/5.png" />
+            </div>
         </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
     </div>
 
     <div class="consultation">
         <div class="consultation-details">
-            <h2>Clinic Schedule:</h2>
-            <h4><i class="fa-solid fa-sun"></i>Monday to Sunday</h4>
-            <h4><i class="fa-solid fa-clock"></i>From 8:00 AM - 12:00AM</h4>
-            <h2>You can select from:</h2>
-            <h4><i class="fa-solid fa-comments"></i>Chat Consultation</h4>
-            <h4><i class="fa-solid fa-video"></i>Video/Voice Consultation</h4>
-            <div class="consult-app">
-                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FDokiPhilippines&tabs=timeline&width=340&height=70&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="70" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-            </div>
+            <h2>Clinic/Booking Hours:</h2>
+            <h4><i class='bx bxs-sun' ></i>Monday to Sunday</h4>
+            <h4><i class='bx bxs-time' ></i>8:00AM To 12:00MN</h4>
+            <h2>Select From:</h2>
+            <h4><i class='bx bxs-conversation' ></i>CHAT consultation</h4>
+            <h4><i class='bx bxs-video' ></i>VIDEO consultation</h4>
+            <h4><i class='bx bx-user-voice'></i>VOICE consultation</h4>
         </div>
         <div class="consultation-desc">
-            <h2>Send us a message to book your appointment</h2>
+            <h2>Send us a message to Book a Consultation</h2>
             <div class="consultation-account">
                 <a href="https://www.messenger.com/t/100406898588103" target="_blank"><button class="messenger-btn"><i class="fa-brands fa-facebook-messenger"></i>Messenger</button></a>
             </div>
@@ -64,7 +102,8 @@
     <div class="about" id="about">
         <div class="about-desc">
             <h1>About Us</h1>
-            <p>DOKI Medical Clinic strives to provide quality healthcare services that are fast, convenient and affordable for Filipinos.<br><br>We aim to provide easy access to medical consultations and advice, making it more convenient for our patients. We are committed to providing excellent service and ensuring the satisfaction of our patients.</p>
+            <p>DOKi Medical Clinic strives to provide quality consultation services that are convenient, fast, and affordable. We are committed to providing easily accessible medical consultation services at the highest possible
+                professional standards.</p>
         </div>
         <div class="about-img">
             <img src="img/doctors/14.png" />
@@ -339,29 +378,35 @@
                 <a href="https://www.instagram.com/dokiphilippines/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- Bootstrap JavaScript Bundle with Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js" integrity="sha512-lU6LWTp/5Kj+RjjJX9AcU6VZUvq8UQeFYucxJ/iw7Vn1Kj8yBzGW5Xhwb5mJmKv+8upNVzUGx"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script src="js/script.js"></script>
     <script>
-
-        var swiper = new Swiper(".mySwiper", {
-        spaceBetween: 30,
-        centeredSlides: true,
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-    });
+        const swiper = new Swiper('.swiper', {
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                type: "progressbar",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            scrollbar: {
+                el: ".swiper-scrollbar",
+                hide: true,
+            },
+            keyboard: true,
+            mousewheel: true,
+        })
     </script>
 </body>
 </html>
